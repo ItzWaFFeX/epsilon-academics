@@ -3371,8 +3371,8 @@
         // SIGN UP (UPDATED)
         // ==================
         window.submitAccount = async () => {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
 
             const fullName = document.getElementById("fullName").value;
             const username = document.getElementById("username").value;
@@ -3408,8 +3408,8 @@
         // LOGIN
         // ==================   
         window.submitLogin = () => {
-            const email = document.getElementById("loginUsername").value;
-            const password = document.getElementById("loginPassword").value;
+            const email = document.getElementById("loginUsername").value.trim();
+            const password = document.getElementById("loginPassword").value.trim();
 
             signInWithEmailAndPassword(auth, email, password)
                 .then(() => {
@@ -3436,4 +3436,3 @@
 </body>
 
 </html>
-
